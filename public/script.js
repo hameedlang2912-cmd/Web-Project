@@ -1,8 +1,7 @@
-// client-side validation and UI effects
 document.addEventListener('DOMContentLoaded', () => {
     const textareas = document.querySelectorAll('textarea');
 
-    // Auto-expand textareas as user types
+   
     textareas.forEach(area => {
         area.addEventListener('input', function() {
             this.style.height = 'auto';
@@ -10,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Simple password strength logger
     const passwordInput = document.querySelector('input[type="password"]');
     if (passwordInput) {
         passwordInput.addEventListener('keyup', (e) => {

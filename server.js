@@ -24,7 +24,7 @@ mongoose.connect(process.env.MONGO_URI)
 
 app.use('/auth', require('./routes/auth'));
 
-// Stage 1: Submit Education
+
 app.post('/submit-education', async (req, res) => {
     if (!req.session.user) return res.redirect('/login.html');
     try {
@@ -34,7 +34,7 @@ app.post('/submit-education', async (req, res) => {
     } catch (err) { res.status(500).send("Update Error"); }
 });
 
-// Stage 2: Submit Projects
+
 app.post('/submit-projects', async (req, res) => {
     if (!req.session.user) return res.redirect('/login.html');
     try {

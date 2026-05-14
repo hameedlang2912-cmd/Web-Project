@@ -1,7 +1,7 @@
-// Fetch all portfolios to display in a table
+
 async function loadPortfolios() {
     try {
-        const response = await fetch('/auth/all-users'); // You'd need a route for this in server.js
+        const response = await fetch('/auth/all-users'); 
         const users = await response.json();
         
         const tableBody = document.getElementById('portfolioTableBody');
